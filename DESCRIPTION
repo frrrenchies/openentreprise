@@ -1,0 +1,19 @@
+Package: openentreprise
+Type: Package
+Title: A simple R client to the openentreprise API
+Version: 0.1.0
+Authors@R: person("Paul-Antoine", "Chevalier", email = "pachevalier@gmail.com",
+  role = c("aut", "cre"))
+Description: Openentreprise is a free API centralizing data on French companies from various open data sources such as Infogreffes, SIRENE, INPI and BODACC.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: httr,
+    tibble,
+    purrr,
+    lubridate,
+    magrittr
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
