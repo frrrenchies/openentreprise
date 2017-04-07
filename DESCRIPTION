@@ -15,5 +15,6 @@ Imports: httr,
     lubridate,
     magrittr
 Suggests: knitr,
-    rmarkdown
+    rmarkdown,
+    testthat
 VignetteBuilder: knitr

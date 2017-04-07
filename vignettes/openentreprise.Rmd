@@ -27,7 +27,11 @@ request_533735932 <- get_openentreprise(.siren = "533735932")
 extract_url(x = request_533735932)
 ```
 
-- [Data Publica](`r extract_url(x = request_533735932)`)
+```{r geturl}
+get_url(.siren = "533735932")
+```
+
+- Voir [Data Publica](`r get_url(.siren = "533735932")`) sur Openentreprise.fr
 
 ## Extract financial data
 

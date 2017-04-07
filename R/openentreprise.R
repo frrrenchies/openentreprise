@@ -74,6 +74,21 @@ extract_financialdata <- function(x) {
 
 }
 
+#' Get financial data
+#'
+#' @param .siren a valid siret number
+#'
+#' @return a tibble
+#' @export
+#'
+#' @examples
+#'
+#' get_financialdata(.siren = "533735932")
+#'
+get_financialdata <- function(.siren) {
+  extract_financialdata(x = get_openentreprise(.siren = .siren))
+  }
+
 #' Extract URL
 #'
 #' extract the URL of the webpage
@@ -109,6 +124,23 @@ extract_url <- function(x) {
   )
 
 }
+
+#' Get URL
+#'
+#' A wrapper for extract_url()
+#'
+#' @param .siren a siren number
+#'
+#' @return a string
+#' @export
+#'
+#' @examples
+#' get_url(.siren = "533735932")
+#'
+get_url <- function(.siren) {
+  extract_url(x = get_openentreprise(.siren = .siren))
+}
+
 
 #' Extract BODACC
 #'
