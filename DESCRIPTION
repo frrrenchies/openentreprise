@@ -13,7 +13,9 @@ Imports: httr,
     tibble,
     purrr,
     lubridate,
-    magrittr
+    magrittr,
+    dplyr,
+    stringr
 Suggests: knitr,
     rmarkdown,
     testthat

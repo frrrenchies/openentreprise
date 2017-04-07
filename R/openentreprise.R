@@ -176,3 +176,77 @@ extract_bodacc <- function(x) {
     url = purrr::map_chr(.x = bodacc, "url")
   )
 }
+
+
+#' Extract main office
+#'
+#' @param x a get request to openentreprise.fr
+#'
+#' @return a tibble
+#' @export
+#'
+#' @examples
+#' get_openentreprise(.siren = "533735932") %>%
+#' extract_mainoffice()
+#'
+
+extract_mainoffice <- function(x) {
+  x %>%
+    magrittr::extract2("company") %>%
+    magrittr::extract2("mainOffice") %>%
+    purrr::flatten() %>%
+    tibble::as_tibble() %>%
+    dplyr::rename_(
+      .dots = list(
+        "code_naf" = ~ id,
+        "label_naf" = ~ label
+      )
+    ) %>%
+    dplyr::mutate_(.dots = list(
+      "creationDate" = ~ as.Date(
+        as.POSIXct(
+          creationDate / 1000,
+          origin = "1970-01-01",
+          tz = "GMT"))
+    ))
+}
+
+
+#' Get main office
+#'
+#' @param .siren a siren number
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' get_mainoffice(.siren = "533735932")
+#'
+get_mainoffice <- function(.siren) {
+  extract_mainoffice(
+    x = get_openentreprise(.siren = .siren)
+    )
+  }
+
+
+#' Extract basic infos
+#'
+#' @param x a get request to openentreprise
+#'
+#' @return a tibble
+#' @export
+#'
+#' @examples
+#' get_openentreprise(.siren = "533735932") %>%
+#' extract_basicinfos()
+#'
+extract_basicinfos <- function(x) {
+
+  x %>%
+    magrittr::extract2("company") %>%
+    purrr::keep(.p = purrr::is_atomic) %>%
+    tibble::as_tibble() %>%
+    dplyr::rename_(.dots = list("siret" = ~ id))
+
+}
+
