@@ -50,7 +50,7 @@
       <h1>Open Entreprise</h1>
                         <h4 class="author">Paul-Antoine Chevalier</h4>
             
-            <h4 class="date">2017-04-07</h4>
+            <h4 class="date">2017-04-26</h4>
           </div>
 
     
@@ -78,7 +78,7 @@
 <div id="extract-financial-data" class="section level2">
 <h2 class="hasAnchor">
 <html><body><a href="#extract-financial-data" class="anchor"> </a></body></html>Extract financial data</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/extract_financialdata.html">extract_financialdata</a></span>(<span class="dt">x =</span> request_533735932) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/get_financialdata.html">get_financialdata</a></span>(<span class="dt">.siren =</span> <span class="st">"533735932"</span>) %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">kable</span>(<span class="dt">caption =</span> <span class="st">"Financial data"</span>)</code></pre></div>
 <table class="table">
 <caption>Financial data</caption>
@@ -86,27 +86,32 @@
 <th align="left">date</th>
 <th align="right">revenue</th>
 <th align="right">operatingincome</th>
+<th align="right">employees</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">2012-01-01</td>
 <td align="right">232569</td>
 <td align="right">-36304</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
 <td align="left">2013-12-31</td>
 <td align="right">391541</td>
 <td align="right">72369</td>
+<td align="right">8</td>
 </tr>
 <tr class="odd">
 <td align="left">2014-12-31</td>
 <td align="right">507634</td>
 <td align="right">80258</td>
+<td align="right">11</td>
 </tr>
 <tr class="even">
 <td align="left">2015-12-31</td>
 <td align="right">809866</td>
 <td align="right">39572</td>
+<td align="right">10</td>
 </tr>
 </tbody>
 </table>

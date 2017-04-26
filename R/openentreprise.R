@@ -52,8 +52,9 @@ extract_financialdata <- function(x) {
     tibble::tibble(
       date = as.Date(integer(0), origin = "1970-01-01"),
       revenue = numeric(0),
-      operatingincome = numeric(0)
-    )
+      operatingincome = numeric(0),
+      employees = numeric(0)
+      )
 
   }
   else {
@@ -68,8 +69,16 @@ extract_financialdata <- function(x) {
           )
         })),
       revenue = purrr::map_dbl(.x = financialdata, "revenue"),
-      operatingincome = purrr::map_dbl(.x = financialdata, "operatingIncome")
-    )
+      operatingincome = purrr::map_dbl(.x = financialdata, "operatingIncome"),
+      employees = purrr::map_dbl(
+        .x = purrr::map_if(
+          .x = purrr::map(.x = financialdata, "employees"),
+          .p = purrr::is_null,
+          .f = function(x) {NA}
+          ),
+        .f = as.numeric
+        )
+      )
   }
 
 }
@@ -216,7 +225,7 @@ extract_mainoffice <- function(x) {
 #'
 #' @param .siren a siren number
 #'
-#' @return
+#' @return a tibble
 #' @export
 #'
 #' @examples

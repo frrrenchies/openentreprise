@@ -35,8 +35,8 @@ get_url(.siren = "533735932")
 
 ## Extract financial data
 
-```{r financialdata}
-extract_financialdata(x = request_533735932) %>% 
+```{r get_financialdata}
+get_financialdata(.siren = "533735932") %>% 
   kable(caption = "Financial data")
 ```
 

@@ -9,6 +9,9 @@ get_mainoffice(.siren)
 \arguments{
 \item{.siren}{a siren number}
 }
+\value{
+a tibble
+}
 \description{
 Get main office
 }
