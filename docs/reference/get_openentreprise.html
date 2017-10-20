@@ -23,14 +23,17 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
@@ -49,10 +52,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../articles/openentreprise.html">Get Started</a>
+</li>
+<li>
+  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       
@@ -76,13 +85,16 @@
     <p>Get data from OpenEntreprise API : https://www.openentreprise.fr/swagger-ui.html</p>
     
 
-    <pre><span class='fu'>get_openentreprise</span>(<span class='no'>.siren</span>)</pre>
+    <pre class="usage"><span class='fu'>get_openentreprise</span>(<span class='no'>.siren</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <dl class="dl-horizontal">
-      <dt>.siren</dt>
-      <dd>a valid siren number</dd>
-    </dl>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>.siren</th>
+      <td><p>a valid siren number</p></td>
+    </tr>
+    </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
@@ -92,32 +104,32 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>get_openentreprise</span>(<span class='kw'>.siren</span> <span class='kw'>=</span> <span class='st'>"533735932"</span>)</div><div class='output co'>#&gt; $company
 #&gt; $company$id
-#&gt; [1] &quot;533735932&quot;
+#&gt; [1] "533735932"
 #&gt; 
 #&gt; $company$mainOffice
 #&gt; $company$mainOffice$siret
-#&gt; [1] &quot;53373593200022&quot;
+#&gt; [1] "53373593200022"
 #&gt; 
 #&gt; $company$mainOffice$enseigne
 #&gt; NULL
 #&gt; 
 #&gt; $company$mainOffice$naf
 #&gt; $company$mainOffice$naf$id
-#&gt; [1] &quot;5829C&quot;
+#&gt; [1] "5829C"
 #&gt; 
 #&gt; $company$mainOffice$naf$label
-#&gt; [1] &quot;Edition de logiciels applicatifs&quot;
+#&gt; [1] "Edition de logiciels applicatifs"
 #&gt; 
 #&gt; 
 #&gt; $company$mainOffice$address
 #&gt; $company$mainOffice$address$street
-#&gt; [1] &quot;22 RUE CHAUCHAT&quot;
+#&gt; [1] "22 RUE CHAUCHAT"
 #&gt; 
 #&gt; $company$mainOffice$address$zipCode
-#&gt; [1] &quot;75009&quot;
+#&gt; [1] "75009"
 #&gt; 
 #&gt; $company$mainOffice$address$city
-#&gt; [1] &quot;PARIS 9&quot;
+#&gt; [1] "PARIS 9"
 #&gt; 
 #&gt; 
 #&gt; $company$mainOffice$creationDate
@@ -128,28 +140,28 @@
 #&gt; list()
 #&gt; 
 #&gt; $company$officialName
-#&gt; [1] &quot;DATA PUBLICA&quot;
+#&gt; [1] "DATA PUBLICA"
 #&gt; 
 #&gt; $company$commercialName
-#&gt; [1] &quot;Data Publica&quot;
+#&gt; [1] "Data Publica"
 #&gt; 
 #&gt; $company$sigle
 #&gt; NULL
 #&gt; 
 #&gt; $company$entityType
 #&gt; $company$entityType$id
-#&gt; [1] &quot;5599&quot;
+#&gt; [1] "5599"
 #&gt; 
 #&gt; $company$entityType$label
-#&gt; [1] &quot;SA à conseil d&#39;administration (s.a.i.)&quot;
+#&gt; [1] "SA à conseil d'administration (s.a.i.)"
 #&gt; 
 #&gt; 
 #&gt; $company$naf
 #&gt; $company$naf$id
-#&gt; [1] &quot;5829C&quot;
+#&gt; [1] "5829C"
 #&gt; 
 #&gt; $company$naf$label
-#&gt; [1] &quot;Edition de logiciels applicatifs&quot;
+#&gt; [1] "Edition de logiciels applicatifs"
 #&gt; 
 #&gt; 
 #&gt; $company$financialData
@@ -216,13 +228,13 @@
 #&gt; [1] 1.394147e+12
 #&gt; 
 #&gt; $company$bodacc[[1]]$type
-#&gt; [1] &quot;DEPOSIT_ACCOUNT&quot;
+#&gt; [1] "DEPOSIT_ACCOUNT"
 #&gt; 
 #&gt; $company$bodacc[[1]]$label
-#&gt; [1] &quot;Avis de dépôts des comptes des sociétés&quot;
+#&gt; [1] "Avis de dépôts des comptes des sociétés"
 #&gt; 
 #&gt; $company$bodacc[[1]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/75012014S005059&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/75012014S005059"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[2]]
@@ -230,13 +242,13 @@
 #&gt; [1] 1.411337e+12
 #&gt; 
 #&gt; $company$bodacc[[2]]$type
-#&gt; [1] &quot;DEPOSIT_ACCOUNT&quot;
+#&gt; [1] "DEPOSIT_ACCOUNT"
 #&gt; 
 #&gt; $company$bodacc[[2]]$label
-#&gt; [1] &quot;Avis de dépôts des comptes des sociétés&quot;
+#&gt; [1] "Avis de dépôts des comptes des sociétés"
 #&gt; 
 #&gt; $company$bodacc[[2]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/75012014S069183&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/75012014S069183"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[3]]
@@ -244,13 +256,13 @@
 #&gt; [1] 1.438034e+12
 #&gt; 
 #&gt; $company$bodacc[[3]]$type
-#&gt; [1] &quot;DEPOSIT_ACCOUNT&quot;
+#&gt; [1] "DEPOSIT_ACCOUNT"
 #&gt; 
 #&gt; $company$bodacc[[3]]$label
-#&gt; [1] &quot;Avis de dépôts des comptes des sociétés&quot;
+#&gt; [1] "Avis de dépôts des comptes des sociétés"
 #&gt; 
 #&gt; $company$bodacc[[3]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/75012015S036704&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/75012015S036704"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[4]]
@@ -258,13 +270,13 @@
 #&gt; [1] 1.464905e+12
 #&gt; 
 #&gt; $company$bodacc[[4]]$type
-#&gt; [1] &quot;DEPOSIT_ACCOUNT&quot;
+#&gt; [1] "DEPOSIT_ACCOUNT"
 #&gt; 
 #&gt; $company$bodacc[[4]]$label
-#&gt; [1] &quot;Avis de dépôts des comptes des sociétés&quot;
+#&gt; [1] "Avis de dépôts des comptes des sociétés"
 #&gt; 
 #&gt; $company$bodacc[[4]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/75012016S021229&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/75012016S021229"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[5]]
@@ -272,13 +284,13 @@
 #&gt; [1] 1.312841e+12
 #&gt; 
 #&gt; $company$bodacc[[5]]$type
-#&gt; [1] &quot;CREATION&quot;
+#&gt; [1] "CREATION"
 #&gt; 
 #&gt; $company$bodacc[[5]]$label
-#&gt; [1] &quot;Créations d&#39;établissements&quot;
+#&gt; [1] "Créations d'établissements"
 #&gt; 
 #&gt; $company$bodacc[[5]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/BXA11215002208V&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/BXA11215002208V"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[6]]
@@ -286,13 +298,13 @@
 #&gt; [1] 1.320793e+12
 #&gt; 
 #&gt; $company$bodacc[[6]]$type
-#&gt; [1] &quot;MODIFICATION_N_MUTATION&quot;
+#&gt; [1] "MODIFICATION_N_MUTATION"
 #&gt; 
 #&gt; $company$bodacc[[6]]$label
-#&gt; [1] &quot;Modifications et mutations diverses&quot;
+#&gt; [1] "Modifications et mutations diverses"
 #&gt; 
 #&gt; $company$bodacc[[6]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/BXB11307002318I&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/BXB11307002318I"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[7]]
@@ -300,13 +312,13 @@
 #&gt; [1] 1.32926e+12
 #&gt; 
 #&gt; $company$bodacc[[7]]$type
-#&gt; [1] &quot;MODIFICATION_N_MUTATION&quot;
+#&gt; [1] "MODIFICATION_N_MUTATION"
 #&gt; 
 #&gt; $company$bodacc[[7]]$label
-#&gt; [1] &quot;Modifications et mutations diverses&quot;
+#&gt; [1] "Modifications et mutations diverses"
 #&gt; 
 #&gt; $company$bodacc[[7]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/BXB120400003325&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/BXB120400003325"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[8]]
@@ -314,13 +326,13 @@
 #&gt; [1] 1.429222e+12
 #&gt; 
 #&gt; $company$bodacc[[8]]$type
-#&gt; [1] &quot;MODIFICATION_N_MUTATION&quot;
+#&gt; [1] "MODIFICATION_N_MUTATION"
 #&gt; 
 #&gt; $company$bodacc[[8]]$label
-#&gt; [1] &quot;Modifications et mutations diverses&quot;
+#&gt; [1] "Modifications et mutations diverses"
 #&gt; 
 #&gt; $company$bodacc[[8]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/BXB15100001297J&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/BXB15100001297J"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[9]]
@@ -328,13 +340,13 @@
 #&gt; [1] 1.434665e+12
 #&gt; 
 #&gt; $company$bodacc[[9]]$type
-#&gt; [1] &quot;MODIFICATION_N_MUTATION&quot;
+#&gt; [1] "MODIFICATION_N_MUTATION"
 #&gt; 
 #&gt; $company$bodacc[[9]]$label
-#&gt; [1] &quot;Modifications et mutations diverses&quot;
+#&gt; [1] "Modifications et mutations diverses"
 #&gt; 
 #&gt; $company$bodacc[[9]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/BXB151630018583&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/BXB151630018583"
 #&gt; 
 #&gt; 
 #&gt; $company$bodacc[[10]]
@@ -342,13 +354,13 @@
 #&gt; [1] 1.34766e+12
 #&gt; 
 #&gt; $company$bodacc[[10]]$type
-#&gt; [1] &quot;DEPOSIT_ACCOUNT&quot;
+#&gt; [1] "DEPOSIT_ACCOUNT"
 #&gt; 
 #&gt; $company$bodacc[[10]]$label
-#&gt; [1] &quot;Avis de dépôts des comptes des sociétés&quot;
+#&gt; [1] "Avis de dépôts des comptes des sociétés"
 #&gt; 
 #&gt; $company$bodacc[[10]]$url
-#&gt; [1] &quot;http://www.bodacc.fr/annonce/detail/BXC122480096535&quot;
+#&gt; [1] "http://www.bodacc.fr/annonce/detail/BXC122480096535"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -362,13 +374,13 @@
 #&gt; $company$brands$samples
 #&gt; $company$brands$samples[[1]]
 #&gt; $company$brands$samples[[1]]$id
-#&gt; [1] &quot;4125904&quot;
+#&gt; [1] "4125904"
 #&gt; 
 #&gt; $company$brands$samples[[1]]$date
 #&gt; [1] 1.413238e+12
 #&gt; 
 #&gt; $company$brands$samples[[1]]$name
-#&gt; [1] &quot;C-Radar&quot;
+#&gt; [1] "C-Radar"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -379,10 +391,10 @@
 #&gt; 
 #&gt; $seo
 #&gt; $seo$normalizedNaf
-#&gt; [1] &quot;edition-de-logiciels-applicatifs&quot;
+#&gt; [1] "edition-de-logiciels-applicatifs"
 #&gt; 
 #&gt; $seo$normalizedName
-#&gt; [1] &quot;data-publica&quot;
+#&gt; [1] "data-publica"
 #&gt; 
 #&gt; </div><div class='input'>
 </div></pre>

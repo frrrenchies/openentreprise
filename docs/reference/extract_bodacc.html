@@ -23,14 +23,17 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
@@ -49,10 +52,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../articles/openentreprise.html">Get Started</a>
+</li>
+<li>
+  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       
@@ -76,13 +85,16 @@
     <p>extract bodacc infos from openentreprise</p>
     
 
-    <pre><span class='fu'>extract_bodacc</span>(<span class='no'>x</span>)</pre>
+    <pre class="usage"><span class='fu'>extract_bodacc</span>(<span class='no'>x</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <dl class="dl-horizontal">
-      <dt>x</dt>
-      <dd>a get request to openentreprise</dd>
-    </dl>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>a get request to openentreprise</p></td>
+    </tr>
+    </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
@@ -90,18 +102,18 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>extract_bodacc</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='get_openentreprise.html'>get_openentreprise</a></span>(<span class='kw'>.siren</span> <span class='kw'>=</span> <span class='st'>"533735932"</span>))</div><div class='output co'>#&gt; # A tibble: 10 × 4
+    <pre class="examples"><div class='input'><span class='fu'>extract_bodacc</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='get_openentreprise.html'>get_openentreprise</a></span>(<span class='kw'>.siren</span> <span class='kw'>=</span> <span class='st'>"533735932"</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 4
 #&gt;          date                    type                                   label
 #&gt;        &lt;date&gt;                   &lt;chr&gt;                                   &lt;chr&gt;
-#&gt; 1  2014-03-06         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
-#&gt; 2  2014-09-21         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
-#&gt; 3  2015-07-27         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
-#&gt; 4  2016-06-02         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
-#&gt; 5  2011-08-08                CREATION              Créations d&#39;établissements
-#&gt; 6  2011-11-08 MODIFICATION_N_MUTATION     Modifications et mutations diverses
-#&gt; 7  2012-02-14 MODIFICATION_N_MUTATION     Modifications et mutations diverses
-#&gt; 8  2015-04-16 MODIFICATION_N_MUTATION     Modifications et mutations diverses
-#&gt; 9  2015-06-18 MODIFICATION_N_MUTATION     Modifications et mutations diverses
+#&gt;  1 2014-03-06         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
+#&gt;  2 2014-09-21         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
+#&gt;  3 2015-07-27         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
+#&gt;  4 2016-06-02         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
+#&gt;  5 2011-08-08                CREATION              Créations d'établissements
+#&gt;  6 2011-11-08 MODIFICATION_N_MUTATION     Modifications et mutations diverses
+#&gt;  7 2012-02-14 MODIFICATION_N_MUTATION     Modifications et mutations diverses
+#&gt;  8 2015-04-16 MODIFICATION_N_MUTATION     Modifications et mutations diverses
+#&gt;  9 2015-06-18 MODIFICATION_N_MUTATION     Modifications et mutations diverses
 #&gt; 10 2012-09-14         DEPOSIT_ACCOUNT Avis de dépôts des comptes des sociétés
 #&gt; # ... with 1 more variables: url &lt;chr&gt;</div><div class='input'>
 
